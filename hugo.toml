@@ -1,0 +1,15 @@
+baseURL = 'http://127.0.0.1'
+languageCode = 'en-us'
+title = 'Kevin'
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"
+
+[Params.Kevin]
+CvSource = 'cv'
+Footer = '''
+[Kevin](https://github.com/tnlx/kevin) Hugo theme.
+Use `[params.kevin.footer]` to overwrite this text.
+'''

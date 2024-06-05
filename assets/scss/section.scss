@@ -1,0 +1,47 @@
+div.si {
+    display: grid;
+    grid-template-areas: "i1" "i2" "i3" "i4" "i5" "i6";
+
+    >.i1 {
+        grid-area: i1;
+    }
+
+    >.i2 {
+        grid-area: i2;
+    }
+
+    >.i3 {
+        grid-area: i3;
+    }
+
+    >.i4 {
+        grid-area: i4;
+        @include secondary-text;
+    }
+
+    >.i5 {
+        grid-area: i5;
+    }
+
+    >.i6 {
+        grid-area: i6;
+        @include secondary-text;
+    }
+
+    @media (min-width: 600px) {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 0;
+        grid-template-areas: "i1 i3" "i2 i4" "i5 i5" "i6 i6";
+
+        >.i3,
+        >.i4 {
+            justify-self: end;
+        }
+
+        >.i5,
+        >.i6 {
+            margin-left: 20px;
+        }
+    }
+}

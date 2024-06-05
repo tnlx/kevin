@@ -1,0 +1,13 @@
+name = 'Kevin'
+license = 'MIT'
+licenselink = 'https://github.com/tnlx/kevin/LICENSE'
+description = 'Web CV'
+homepage = 'https://github.com/tnlx/kevin'
+demosite = 'https://tnlx.github.io/kevin'
+
+tags = ['cv', 'resume']
+features = []
+
+[author]
+  name = 'Thuc Le'
+  homepage = 'https://github.com/tnlx'

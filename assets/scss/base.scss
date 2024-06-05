@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    align-content: end;
+}
+
+body {
+    font-family: 'Spectral', serif;
+    font-size: 16px;
+    margin: auto;
+    width: 700px;
+    color: var(--foreground-color);
+
+    @media screen and (max-width:720px) {
+        width: 90%;
+    }
+
+    @media print {
+        width: 80%;
+    }
+}
+
+footer {
+    margin: 2em 0;
+    color: var(--footer-text-color);
+    font-size: .5em;
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: normal;
+}
+
+h2 {
+    margin-top: .4em;
+    border-bottom: 1px solid var(--border-color);
+}
+
+h4 {
+    font-style: italic;
+}
+
+header {
+    text-align: center;
+    margin-top: 1em;
+}
+
+a {
+    color: var(--hyperlink-color);
+}
+
+a:hover {
+    color: var(--hyperlink-hover-color);
+}

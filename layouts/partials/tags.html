@@ -1,0 +1,5 @@
+<ul class="tags">
+    {{ range . }}
+    <li>{{ . | markdownify }}</li>
+    {{ end }}
+</ul>

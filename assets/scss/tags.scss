@@ -1,0 +1,16 @@
+ul.tags {
+    overflow-wrap: normal;
+    margin-inline-start: 0;
+    padding-inline-start: 0;
+
+    li {
+        font-style: italic;
+        padding: .1em;
+        list-style-type: none;
+        display: inline-block;
+    }
+
+    li:not(:last-child):after {
+        content: ", ";
+    }
+}

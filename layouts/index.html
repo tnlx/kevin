@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Site.Title }}</title>
+    {{ $sass := resources.Get "scss/main.scss" }}
+    {{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+</head>
+
+<body>
+
+    {{ $data := index .Site.Data .Site.Params.Kevin.CvSource }}
+
+    <header>
+        <h1>{{ $data.CvHolder }}</h1>
+        {{ with $data.Contacts }}
+        <div>
+            <ul class="contacts">
+                {{ range . }}
+                <li>{{ . | markdownify }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+    </header>
+
+    <main>
+        {{ with $data.Experience }}
+        <section class="experience">
+            <h2>EXPERIENCES</h2>
+            {{ range . }}
+            <div class="si">
+                <h3 class="i1">{{ .Role }}</h3>
+                <h4 class="i2">{{ .Company | markdownify }}</h4>
+                <span class="i3">{{ .Period }}</span>
+                <span class="i4">{{ .Location }}</span>
+                <div class="i5">{{ .Summary | markdownify }}</div>
+                {{ with .Tags }}
+                <div class="i6">
+                    {{ partial "tags" . }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ with $data.Education }}
+        <section class="education">
+            <h2>EDUCATION</h2>
+            {{ range . }}
+            <div class="si">
+                <h3 class="i1">{{ .Degree }}</h3>
+                <h4 class="i2">{{ .University | markdownify }}</h4>
+                <span class="i3">{{ .Period }}</span>
+                <span class="i4">{{ .Location }}</span>
+                <div class="i5">{{ .Summary | markdownify }}</div>
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ with $data.Certificate }}
+        <section class="certificate">
+            <h2>CERTIFICATES</h2>
+            {{ range . }}
+            <div class="si">
+                <h3 class="i1">{{ .Certificate | markdownify }}</h3>
+                <span class="i2">Issued by {{ .Issuer | markdownify }}</span>
+                <span class="i3">{{ .Period }}</span>
+                <span class="i4">{{ .Location }}</span>
+                <div class="i5">{{ .Summary | markdownify }}</div>
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ with $data.Project }}
+        <section class="project">
+            <h2>PROJECTS</h2>
+            {{ range . }}
+            <div class="si">
+                <h3 class="i1">{{ .Title | markdownify }}</h3>
+                <span class="i3">{{ .Period }}</span>
+                <span class="i4">{{ .Location }}</span>
+                <div class="i5">{{ .Summary | markdownify }}</div>
+                {{ with .Tags }}
+                <div class="i6">
+                    {{ partial "tags" . }}
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ with $data.SkillTags }}
+        <section class="skills">
+            <h2>SKILLS</h2>
+            <div class="i6">
+                {{ partial "tags" . }}
+            </div>
+        </section>
+        {{ end }}
+
+    </main>
+
+    <footer>
+        <p>{{ .Site.Params.Kevin.Footer | markdownify }}</p>
+    </footer>
+</body>
+
+</html>
