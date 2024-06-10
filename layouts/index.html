@@ -4,9 +4,11 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ .Site.Title }}</title>
-    {{ $sass := resources.Get "scss/main.scss" }}
-    {{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
-    <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    {{ $main := resources.Get "scss/main.scss" | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $main.Permalink }}" integrity="{{ $main.Data.Integrity }}">
+    {{ $print := resources.Get "scss/print.scss" | resources.ToCSS | resources.Fingerprint }}
+    <link rel="stylesheet" media="print" href="{{ $print.Permalink }}" integrity="{{ $print.Data.Integrity }}">
 </head>
 
 <body>
@@ -20,24 +22,8 @@
     </header>
 
     <main>
-        {{ with $data.Experience }}
-        {{ partial "experience" . }}
-        {{ end }}
-
-        {{ with $data.Education }}
-        {{ partial "education" . }}
-        {{ end }}
-
-        {{ with $data.Certificate }}
-        {{ partial "certificate" . }}
-        {{ end }}
-
-        {{ with $data.Project }}
-        {{ partial "project" . }}
-        {{ end }}
-
-        {{ with $data.SkillTags }}
-        {{ partial "skills" . }}
+        {{ range .Site.Params.Kevin.Sections }}
+        {{ partial "section" (dict "Name" . "Data" (index $data . )) }}
         {{ end }}
     </main>
     

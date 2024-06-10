@@ -1,16 +1,11 @@
-<section class="project">
-    <h2>PROJECTS</h2>
-    {{ range . }}
-    <section class="si">
-        <h3 class="i1">{{ .Title | markdownify }}</h3>
-        <div class="i3">{{ .Period }}</div>
-        <div class="i4">{{ .Location }}</div>
-        <div class="i5">{{ .Summary | markdownify }}</div>
-        {{ with .Tags }}
-        <div class="i6">
-            {{ partial "tags" . }}
-        </div>
-        {{ end }}
-    </section>
+<section class="si">
+    <h3 class="i1">{{ .Title | markdownify }}</h3>
+    <div class="i3">{{ .Period }}</div>
+    <div class="i4">{{ .Location }}</div>
+    <div class="i5">{{ .Summary | markdownify }}</div>
+    {{ with .Tags }}
+    <div class="i6">
+        {{ partial "tags" . }}
+    </div>
     {{ end }}
 </section>

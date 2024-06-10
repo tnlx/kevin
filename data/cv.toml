@@ -1,0 +1,83 @@
+CvHolder = "Your Name"
+Contacts = [
+    "[(+00)000-000-000](#)",
+    "[Email](#)",
+    "[LinkedIn](#)",
+    ]
+
+[[Experience]]
+Role = "Job title"
+Company = "[Company](#)"
+Location = "Location"
+Period = "Year Y - Present"
+Summary = '''
+Responsiblity and achievements at this role.
+'''
+Tags = ["(Optional)", "A", "Few", "Tag", "Maybe", "About", "Skills", "Or", "Tools"]
+
+[[Experience]]
+Role = "Another job title"
+Company = "[Another Company](#)"
+Location = "Location"
+Period = "Year X - Year Y"
+Summary = '''
+Responsiblity and achievements at this role.
+'''
+Tags = []
+
+[[Project]]
+Title = "Project Title"
+Tags = ["(Optional)", "Skills", "Or", "Tools", "Related", "To", "The", "Project"]
+Period = "Year Z - Present"
+Summary = '''
+Description about the project.
+'''
+
+[[Project]]
+Title = "[Another project](#)"
+Tags = []
+Period = "Year Y - Present"
+Summary = '''
+Description about the project.
+'''
+
+[[Certificate]]
+Certificate = "Certificate Name"
+Issuer = "[Issuer](#)"
+Location = "Location"
+Period = "Year obtained"
+Summary = '''
+Description about the project.
+'''
+
+[[Education]]
+Degree = "Degree"
+University = "[University/College/Institution](#)"
+Location = "Location"
+Period = "Year Y - Year Z"
+Summary = '''
+Some highlights about the education.
+'''
+
+[[Education]]
+Degree = "Another Degree"
+University = "[University/College/Institution](#)"
+Location = "Location"
+Period = "Year Y - Year Z"
+Summary = '''
+Some highlights about the education.
+'''
+
+[[Skill]]
+Category = "First skill category"
+Summary = '''
+'''
+Tags = ['A', 'List', 'Of', 'Skills', 'Related', 'To', 'This', 'Category', 'Displayed', 'As', 'Tags']
+
+[[Skill]]
+Category = "Second skill category"
+Summary = '''
+- Skills displayed as bullet points
+- Skills displayed as bullet points
+'''
+Tags = []

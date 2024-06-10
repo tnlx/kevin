@@ -1,0 +1,9 @@
+# Sections
+certificate = 'Certificates'
+education = 'Education'
+experience = 'Experience'
+project = 'Projects'
+skill = 'Skills'
+
+# Inline texts
+issued-by = 'Issued by {{ . }}'

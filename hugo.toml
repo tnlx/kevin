@@ -1,6 +1,7 @@
 baseURL = 'http://127.0.0.1'
 languageCode = 'en-us'
 title = 'Kevin'
+enableMissingTranslationPlaceholders = true
 
 [module]
   [module.hugoVersion]
@@ -9,6 +10,7 @@ title = 'Kevin'
 
 [Params.Kevin]
 CvSource = 'cv'
+Sections = ['Experience', 'Project', 'Certificate', 'Education', 'Skill']
 Footer = '''
 [Kevin](https://github.com/tnlx/kevin) Hugo theme.
 Use `[params.kevin.footer]` to overwrite this text.

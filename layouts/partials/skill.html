@@ -1,8 +1,5 @@
 <section class="si">
-    <h3 class="i1">{{ .Role }}</h3>
-    <h4 class="i2">{{ .Company | markdownify }}</h4>
-    <div class="i3">{{ .Period }}</div>
-    <div class="i4">{{ .Location }}</div>
+    <h3 class="i2">{{ .Category | markdownify }}</h3>
     <div class="i5">{{ .Summary | markdownify }}</div>
     {{ with .Tags }}
     <div class="i6">

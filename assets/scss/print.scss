@@ -1,0 +1,32 @@
+@media print {
+    body {
+        margin: 0;
+        padding: 0;
+        font-size: 11pt;
+        line-height: 1.15;
+    }
+
+    footer {
+        margin-bottom: 1mm;
+        align-content: end;
+    }
+
+    h2 {
+        line-height: 1;
+        margin-top: 1.5mm;
+    }
+
+    h3 {
+        margin-top: 1.5mm;
+        ;
+    }
+
+    a,
+    a:visited {
+        color: var(--hyperlink-color);
+    }
+
+    main>section {
+        margin-top: 1mm;
+    }
+}
