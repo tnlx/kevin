@@ -2,6 +2,8 @@
 
 A Hugo theme to create a minimalistic web curriculum-vitae.
 
+![Sample](sample.png)
+
 By default, it reads from `cv.*` in Hugo `/data` directory.
 
 ## Installation
