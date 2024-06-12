@@ -1,7 +1,0 @@
-{{ $name :=  lower .Name }}
-<section class="{{ $name }}">
-    <h2>{{ i18n $name }}</h2>
-    {{ range .Data }}
-    {{ partial $name . }}
-    {{ end }}
-</section>

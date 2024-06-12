@@ -1,7 +1,7 @@
 <section class="si">
     <h3 class="i1">{{ .Certificate | markdownify }}</h3>
     <div class="i2">{{ (i18n "issued-by" .Issuer) | markdownify }}</div>
-    <div class="i3">{{ .Period }}</div>
-    <div class="i4">{{ .Location }}</div>
+    <div class="i3">{{ .Period | markdownify }}</div>
+    <div class="i4">{{ .Location | markdownify }}</div>
     <div class="i5">{{ .Summary | markdownify }}</div>
 </section>

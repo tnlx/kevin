@@ -2,9 +2,11 @@
 <html lang="{{ .Site.LanguageCode }}">
 
 <head>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ .Site.Hugo.Generator }}
     <title>{{ .Site.Title }}</title>
-    <link rel="icon" type="image/x-icon" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     {{ $main := resources.Get "scss/main.scss" | resources.ToCSS | resources.Fingerprint }}
     <link rel="stylesheet" href="{{ $main.Permalink }}" integrity="{{ $main.Data.Integrity }}">
     {{ $print := resources.Get "scss/print.scss" | resources.ToCSS | resources.Fingerprint }}
@@ -23,10 +25,10 @@
 
     <main>
         {{ range .Site.Params.Kevin.Sections }}
-        {{ partial "section" (dict "Name" . "Data" (index $data . )) }}
+        {{ partial "section2" (dict "Name" . "Data" (index $data . )) }}
         {{ end }}
     </main>
-    
+
     <footer>
         <p>{{ .Site.Params.Kevin.Footer | markdownify }}</p>
     </footer>

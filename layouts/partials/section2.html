@@ -1,0 +1,9 @@
+{{ $name :=  lower .Name }}
+{{ with .Data }}
+<section class="{{ $name }}">
+    <h2>{{ i18n $name | markdownify }}</h2>
+    {{ range . }}
+    {{ partial (printf "section3/%s" $name) . }}
+    {{ end }}
+</section>
+{{ end }}

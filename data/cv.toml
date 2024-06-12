@@ -47,7 +47,7 @@ Issuer = "[Issuer](#)"
 Location = "Location"
 Period = "Year obtained"
 Summary = '''
-Description about the project.
+Description about the certificate.
 '''
 
 [[Education]]
