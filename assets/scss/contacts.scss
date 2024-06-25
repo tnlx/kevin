@@ -14,7 +14,7 @@ ul.contacts {
     }
 
     li:not(:last-child):after {
-        content: "|";
+        content: var(--separator-contacts);
         padding: 0 4px;
     }
 }

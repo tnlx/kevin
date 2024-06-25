@@ -1,9 +1,10 @@
 @media print {
+
     body {
         margin: 0;
         padding: 0;
-        font-size: 11pt;
-        line-height: 1.15;
+        line-height: 1.1;
+        font-size: 8pt;
     }
 
     footer {
@@ -13,12 +14,11 @@
 
     h2 {
         line-height: 1;
-        margin-top: 1.5mm;
+        margin-top: 2mm;
     }
 
     h3 {
-        margin-top: 1.5mm;
-        ;
+        margin-top: 2mm;
     }
 
     a,
@@ -28,5 +28,9 @@
 
     main>section {
         margin-top: 1mm;
+    }
+
+    ul.contacts {
+        font-size: 7pt;
     }
 }

@@ -2,8 +2,6 @@
 
 A Hugo theme to create a minimalistic web curriculum-vitae.
 
-![screenshot](screenshot.png)
-
 ## Installation
 
 ```toml
